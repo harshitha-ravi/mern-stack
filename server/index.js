@@ -78,12 +78,20 @@ app.use("/posts", postRoutes);
 
 /* SETTING UP MONGOOSE */
 const PORT = process.env.PORT || 6001; 
+
+// to supress the warning
+mongoose.set('strictQuery', true); 
+
 mongoose.connect(process.env.MONGO_URL, {
      useNewUrlParser : true,
      useUnifiedTopology : true,
 }).then(() => {
     app.listen(PORT, () => console.log(`Server Port : ${PORT}`));
+     
 }).catch((error) => console.log(`${error} : Couldn't connect to database`));  
+
+
+
 
 
 
