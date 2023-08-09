@@ -1,5 +1,5 @@
 import express from "express";
-import {studentLogin, registerStudent} from "../controller/auth.js";
+import {studentLogin} from "../controller/auth.js";
 
 /** Setting up a router 
  * This will allow the express to identify that these routes will be configured 

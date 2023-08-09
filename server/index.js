@@ -68,7 +68,7 @@ const uploadFile = multer({localStorage});
  * Here, image is the variable name from the fronetend - the image given in that variable
  * will be grabbed - make sure it aligns with the frontend
 */
-app.post("auth/register", uploadFile.single("image"), registerStudent);
+app.post("/auth/register", uploadFile.single("image"), registerStudent);
 app.post("/posts/create", verifyToken, uploadFile.single("image"), createPost);
 
 /** OTHER ROUTES */
