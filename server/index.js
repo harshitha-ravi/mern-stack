@@ -15,7 +15,7 @@ import authRoutes from "./routes/auth.js";
 import studentRoutes from "./routes/student.js"
 import postRoutes from "./routes/post.js"
 import { verifyToken } from "./middleware/auth.js";
-
+ 
 
 /* Configurations - Will contain all the middleware configs and different package configs*/
 
