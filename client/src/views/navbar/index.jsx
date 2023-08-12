@@ -44,9 +44,9 @@ const Navbar = () => {
   const alt = theme.palette.background.alt;
 
    // fethcing the full name of the student
-  //const fullName = `${student.firstName} ${student.lastName}`;
+  const fullName = `${student.firstName} ${student.lastName}`;
   // TODO: need to remove this, once login done, added to escape error
-  const fullName = "Harshitha" 
+  //const fullName = "Harshitha" 
 
       /** Material-UI has box components -> allows to pass any type of 
      *  CSS property (padding, backgroundColour) to use them as a component property --> only available to Box component

@@ -27,6 +27,7 @@ const LoginPage = () => {
             <Typography fontWeight="500" variant="h5" sx={{mb: "1.5rem"}}>
                 Welcome to Student Connect, A Bridge for Question Seekers
             </Typography>
+            <Form />
         </Box>
     </Box>);
 }
