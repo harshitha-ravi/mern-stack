@@ -20,7 +20,6 @@ const StudentWidget = ({ studentId, profileImage }) => {
   const dark = palette.neutral.dark;
   const medium = palette.neutral.medium;
   const main = palette.neutral.main;
-  const id = studentId;
 
   // function to integrate backend API to get a student info
   const getStudent = async () => {
