@@ -40,7 +40,7 @@ app.use(cors()); // cross-origin request
 
 // set the directory where we store images locally
 // For production - can be stored on cloud storage like s3
-// This will called by front-end to populate the student profile
+// This will called by front-end to populate the student profile/any images related to post
 app.use("/images", express.static(path.join(__dirname, "public/images")));
 
 /* Local File Storage using multer 
