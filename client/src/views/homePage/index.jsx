@@ -3,6 +3,9 @@ import Navbar from "views/navbar";
 import StudentWidget from "views/widgets/StudentWidget";
 import { useSelector } from "react-redux";
 import MyQuestionWidget from "views/widgets/MyQuestionWidget";
+import FeedQuestionsWidget from "views/widgets/FeedQuestionsWidget";
+import BroadcastWidget from "views/widgets/BroadcastWidget";
+import ConnectionListWidget from "views/widgets/ConnectionListWidget";
 
 const HomePage = () => {
   const isNonMobileScreens = useMediaQuery("(min-width: 1000px)");
@@ -26,11 +29,20 @@ const HomePage = () => {
           mt={isNonMobileScreens ? undefined : "2rem"}
         >
           <MyQuestionWidget profileImage={profileImage} />
+          <FeedQuestionsWidget studentId={_id} />
         </Box>
-        {isNonMobileScreens && <Box flexBasis="26%"></Box>}
+        {isNonMobileScreens && (
+          <Box flexBasis="26%">
+            <BroadcastWidget />
+            <Box m="2rem 0" />
+            <ConnectionListWidget studentId={_id} />
+          </Box>
+        )}
       </Box>
     </Box>
   );
 };
 
 export default HomePage;
+
+// <FeedQuestionsWidget studentId={_id} />

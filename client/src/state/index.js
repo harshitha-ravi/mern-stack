@@ -5,6 +5,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
   mode: "light",
   student: null,
+  connections: [],
   token: null,
   posts: [],
 };
@@ -21,6 +22,7 @@ export const authSlice = createSlice({
     // For login -> fethc the student and token from the payload
     setLogin: (state, action) => {
       state.student = action.payload.student;
+      state.connections = action.payload.student.connections;
       state.token = action.payload.token;
     },
     // For logout function re-setting the student and token
@@ -31,6 +33,7 @@ export const authSlice = createSlice({
     setConnections: (state, action) => {
       if (state.student) {
         state.student.connections = action.payload.connections;
+        state.connections = action.payload.connections;
       } else {
         console.error("student connections non-existent");
       }
@@ -50,6 +53,12 @@ export const authSlice = createSlice({
 });
 
 // todo: need to understand the logic
-export const { setMode, setLogin, setLogout, setFriends, setPosts, setPost } =
-  authSlice.actions;
+export const {
+  setMode,
+  setLogin,
+  setLogout,
+  setConnections,
+  setPosts,
+  setPost,
+} = authSlice.actions;
 export default authSlice.reducer;
